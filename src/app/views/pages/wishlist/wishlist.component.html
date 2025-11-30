@@ -1,0 +1,28 @@
+<main>
+    <div class="grid grid-cols-2">
+            <div *ngFor="let item of items">
+                <a href="#"
+                    class="border no-underline text-primary-text flex flex-col gap-2 relative h-full bg-white">
+                    <div class="border-b px-3 py-2 bg-gray-50">
+                        <img src="https://rihaa.com/cdn/shop/files/DE624B72-6C8E-416D-AACD-85DA178C975E.jpg?v=1725823312" alt="" class="aspect-[3/4] object-contain min-w-full">
+                    </div>
+                    <ul class="m-0 px-2 pb-3">
+                        <li class="text-[10px]">Silk saree</li>
+                        <li class="text-sm mt-1.5 text-primary-text">&#8377;{{item.price}}</li>
+                        <li class="mt-1"><span
+                                class="bg-rating text-white px-2 py-0.5 rounded-full text-xs">4.0</span>
+                        </li>
+                    </ul>
+
+                    <button
+                        class="absolute right-3.5 top-3 bg-secondary p-2 rounded-full shadow opacity-70">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor"
+                            class="bi bi-suit-heart-fill text-red-600" viewBox="0 0 16 16">
+                            <path
+                                d="M4 1c2.21 0 4 1.755 4 3.92C8 2.755 9.79 1 12 1s4 1.755 4 3.92c0 3.263-3.234 4.414-7.608 9.608a.513.513 0 0 1-.784 0C3.234 9.334 0 8.183 0 4.92 0 2.755 1.79 1 4 1" />
+                        </svg>
+                    </button>
+                </a>
+            </div>
+        </div>
+</main>

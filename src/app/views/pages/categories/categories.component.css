@@ -1,0 +1,22 @@
+#category-box{
+    overflow: auto;
+}
+
+#category-box::-webkit-scrollbar{
+    height: 0;
+    width: 0;
+}
+
+#title{
+    position: relative;
+}
+
+#title:after{
+    content: '';
+    position: absolute;
+    background-color: #111111;
+    height: 1px;
+    width: 100px;
+    top: 50%;
+    margin-left: 10px;
+}

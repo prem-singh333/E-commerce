@@ -1,0 +1,7 @@
+#search-bar:focus{
+    outline: none;
+}
+
+header{
+    background: linear-gradient(to bottom, #007bff, #f8f9fa);
+}

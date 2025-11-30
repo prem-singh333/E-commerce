@@ -1,0 +1,8 @@
+#all-rate-check{
+    margin-top: 16px !important;
+    display: inline-block;
+}
+
+#quantity:focus{
+    outline: none;
+}

@@ -1,0 +1,8 @@
+<div class="flex flex-col min-h-screen">
+
+    <app-navbar *ngIf="showNavbar" class="sticky top-0 z-20"></app-navbar>
+    <div class="flex-1 mb-[58px]">
+        <router-outlet></router-outlet>
+    </div>
+</div>
+<app-bottom-navbar *ngIf="bottomNav"></app-bottom-navbar>
