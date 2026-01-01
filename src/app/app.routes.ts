@@ -1,4 +1,5 @@
 import { Routes } from '@angular/router';
+import { authGuard } from './views/component/services/auth.guard';
 
 export const routes: Routes = [
     {
@@ -23,19 +24,33 @@ export const routes: Routes = [
     },
 
     {
-        path: "order",
+        path: "order", canActivate: [authGuard],
         loadComponent: () => import("./views/pages/order/order.component").then((c) => c.OrderComponent)
     },
     {
-        path: "cart",
+        path: "cart", canActivate: [authGuard],
         loadComponent: () => import("./views/pages/cart/cart.component").then((c) => c.CartComponent)
     },
     {
-        path: "wishlist",
+        path: "wishlist", canActivate: [authGuard],
         loadComponent: () => import("./views/pages/wishlist/wishlist.component").then((c) => c.WishlistComponent)
     },
     {
         path: "profile",
         loadComponent: () => import("./views/pages/account/account.component").then((c) => c.AccountComponent)
     },
+
+    {
+        path: "searchBar",
+        loadComponent: () => import("./views/pages/searchbar/searchbar.component").then((m) => m.SearchbarComponent)
+    },
+    {
+        path: "selling", loadComponent: () => import("./views/pages/add-product/add-product.component").then((m) => m.AddProductComponent)
+    },
+    {
+        path: "sign-up", loadComponent: () => import("./views/pages/signup-form/signup-form.component").then((m) => m.SignupFormComponent)
+    },
+    {
+        path: "login", loadComponent: () => import("./views/pages/login/login.component").then((m) => m.LoginComponent)
+    }
 ];

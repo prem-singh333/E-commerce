@@ -2,8 +2,8 @@
 
     <header class="border-b">
         <div class="px-3 py-2.5 flex items-center justify-between">
-            <a routerLink="/account" class="flex items-center gap-2 no-underline">
-                <img src="images/user.jpg" alt="" class="w-[32px] h-[32px] rounded-full object-cover">
+            <a routerLink="/profile" class="flex items-center gap-2 no-underline">
+                <img src="/images/user.jpg" alt="" class="w-[32px] h-[32px] rounded-full object-cover">
 
                 <span class="text-xs text-secondary">Prem Singh</span>
             </a>
@@ -52,35 +52,43 @@
 
     <div id="main">
         <div
-            class="grid grid-cols-[repeat(auto-fit,minmax(80px,1fr))] gap-y-4 place-items-center border-b pb-5 px-3 py-5">
+            class="grid grid-cols-[repeat(auto-fit,minmax(80px,1fr))] place-items-center border-b pb-5 px-3 py-5 gap-y-4">
+            <a routerLink="/category" class="grid place-items-center no-underline">
+                <div class="w-[50px] h-[50px] object-cover rounded-full border flex items-center justify-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512" fill="currentColor" hieght="25px" width="25px"><path d="M320.2 112c44.2 0 80-35.8 80-80l53.5 0c17 0 33.3 6.7 45.3 18.7L617.6 169.4c12.5 12.5 12.5 32.8 0 45.3l-50.7 50.7c-12.5 12.5-32.8 12.5-45.3 0l-41.4-41.4 0 224c0 35.3-28.7 64-64 64l-192 0c-35.3 0-64-28.7-64-64l0-224-41.4 41.4c-12.5 12.5-32.8 12.5-45.3 0L22.9 214.6c-12.5-12.5-12.5-32.8 0-45.3L141.5 50.7c12-12 28.3-18.7 45.3-18.7l53.5 0c0 44.2 35.8 80 80 80z " class="text-blue-400"/></svg>
+                    
+                </div>
+                <span class="text-xs mt-1 text-primary-text">All Category</span>
+            </a>
+
             <a href="#" class="grid place-items-center no-underline">
                 <img src="https://royaltail.in/cdn/shop/files/royaltail-shirt-printed-rt-srt-085-1.jpg?v=1706183488&width=1080"
-                    alt="" class="w-[50px] h-[60px] object-cover rounded-t-3xl">
+                    alt="" class="w-[50px] h-[50px] object-cover rounded-full">
                 <span class="text-xs mt-1 text-primary-text">Men</span>
             </a>
             <a href="#" class="grid place-items-center no-underline">
                 <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQILIfMXUmobP05FaUgMHSWRB332ZOCei0kpg&s"
-                    alt="" class="w-[50px] h-[60px] object-cover rounded-t-3xl">
+                    alt="" class="w-[50px] h-[50px] object-cover rounded-full">
                 <span class="text-xs mt-1 text-primary-text">Kurti</span>
             </a>
             <a href="#" class="grid place-items-center no-underline">
                 <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTLbbE61uWfLWE7hFBJWd6HGJ4fTq2IBSlG0A&s"
-                    alt="" class="w-[50px] h-[60px] object-cover rounded-t-3xl">
+                    alt="" class="w-[50px] h-[50px] object-cover rounded-full">
                 <span class="text-xs mt-1 text-primary-text">Kids</span>
             </a>
             <a href="#" class="grid place-items-center no-underline">
                 <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQPF4gxgXoNZgksCMtY2dKnppleV_gHNPsjxA&s"
-                    alt="" class="w-[50px] h-[60px] object-cover rounded-t-3xl">
+                    alt="" class="w-[50px] h-[50px] object-cover rounded-full">
                 <span class="text-xs mt-1 text-primary-text">Saree</span>
             </a>
             <a href="#" class="grid place-items-center no-underline">
                 <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR938togibaro60d3dqXW4PxgL3wG2_O8KTNA&s"
-                    alt="" class="w-[50px] h-[60px] object-cover rounded-t-3xl">
+                    alt="" class="w-[50px] h-[50px] object-cover rounded-full">
                 <span class="text-xs mt-1 text-primary-text">Electronics</span>
             </a>
             <a href="#" class="grid place-items-center no-underline">
                 <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTq2vmPRfoa2Hc24HXOyECkedHtptox-IsCSA&s"
-                    alt="" class="w-[50px] h-[60px] object-cover rounded-t-3xl">
+                    alt="" class="w-[50px] h-[50px] object-cover rounded-full">
                 <span class="text-xs mt-1 text-primary-text">Jewelleries</span>
             </a>
         </div>
@@ -90,13 +98,13 @@
                 <a [routerLink]="['/products', item.id]"
                     class="border no-underline text-primary-text flex flex-col gap-2 relative h-full bg-white">
                     <div class="border-b px-3 py-2 bg-gray-50">
-                        <img src="{{item.image}}" alt="" class="aspect-[3/4] object-contain min-w-full">
+                        <img [src]="item.colors[0].image[0]" alt="" class="aspect-[3/4] object-contain min-w-full">
                     </div>
                     <ul class="m-0 px-2 pb-3">
-                        <li class="text-[10px]">{{item.title}}</li>
-                        <!-- <li class="text-sm mt-1.5 text-primary-text">&#8377;{{item.price | number: '1.0-0'}}/-</li> -->
-                        <li class="mt-1"><span
-                                class="bg-rating text-white px-2 py-0.5 rounded-full text-xs">{{item.rating.rate}}</span>
+                        <li class="text-xs">{{item.title}}</li>
+                        <li class="text-sm mt-1.5 text-primary-text">&#8377;{{item.sellingPrice | number: '1.0-0'}}</li>
+                        <li><span
+                                class="bg-rating text-white px-2 py-0.5 rounded-full text-xs">4.5</span>
                         </li>
                     </ul>
 

@@ -13,16 +13,20 @@ import { CommonModule } from '@angular/common';
 export class HomePageComponent implements OnInit{
   items: any;
 
+  defaultImage: any
+
+  showDefaultImg: any
+
   res = inject(ServiceService)
   router = inject(Router)
 
   ngOnInit(): void{
     this.showData()
   }
-  
+
   showData(){
-    this.res.get().subscribe((res) => {
-        this.items = res
+    this.res.get().subscribe(res => {
+      this.items = res
     })
   }
 

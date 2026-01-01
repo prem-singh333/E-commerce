@@ -1,16 +1,4 @@
-<main class="bg-white h-screen p-3 mb-[48px]">
-    <!-- <div class="flex items-center">
-       <button (click)="goBack()">
-                <svg xmlns="http://www.w3.org/2000/svg"
-                 width="20" height="20" fill="currentColor"
-                        class="bi bi-angle-left-solid text-primary-text"
-                    viewBox="0 0 256 512">
-                    <path
-                        d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L77.3 256 214.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z" />
-                </svg>
-            </button>
-    </div> -->
-
+<main class="h-screen p-3">
     <div class="py-2.5 flex items-center gap-5">
 
         <button (click)="goBack()">
@@ -33,16 +21,16 @@
 
         <div class="m-0 grid grid-cols-2 gap-4 border-b py-5">
             <a routerLink="/order"
-                class="text-primary-text no-underline text-sm px-3 py-1 bg-white border rounded-md flex items-center justify-center gap-3">
+                class="text-primary no-underline text-sm px-3 py-1 bg-sky-50 border border-blue-400 rounded-md flex items-center justify-center gap-3">
                 <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" fill="currentColor"
-                    class="bi bi-box-seam text-primary-text" viewBox="0 0 16 16">
+                    class="bi bi-box-seam text-primary" viewBox="0 0 16 16">
                     <path
                         d="M8.186 1.113a.5.5 0 0 0-.372 0L1.846 3.5l2.404.961L10.404 2zm3.564 1.426L5.596 5 8 5.961 14.154 3.5zm3.25 1.7-6.5 2.6v7.922l6.5-2.6V4.24zM7.5 14.762V6.838L1 4.239v7.923zM7.443.184a1.5 1.5 0 0 1 1.114 0l7.129 2.852A.5.5 0 0 1 16 3.5v8.662a1 1 0 0 1-.629.928l-7.185 2.874a.5.5 0 0 1-.372 0L.63 13.09a1 1 0 0 1-.63-.928V3.5a.5.5 0 0 1 .314-.464z" />
                 </svg><span>Orders</span></a>
             <a routerLink="/wishlist"
-                class="text-primary-text no-underline text-sm text-center px-3 py-1 bg-white border rounded-md flex items-center justify-center gap-3">
+                class="text-primary no-underline text-sm text-center px-3 py-1 bg-sky-50 border border-blue-400 rounded-md flex items-center justify-center gap-3">
                 <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" fill="currentColor"
-                    class="bi bi-suit-heart text-primary-text" viewBox="0 0 16 16">
+                    class="bi bi-suit-heart text-primary" viewBox="0 0 16 16">
                     <path
                         d="m8 6.236-.894-1.789c-.222-.443-.607-1.08-1.152-1.595C5.418 2.345 4.776 2 4 2 2.324 2 1 3.326 1 4.92c0 1.211.554 2.066 1.868 3.37.337.334.721.695 1.146 1.093C5.122 10.423 6.5 11.717 8 13.447c1.5-1.73 2.878-3.024 3.986-4.064.425-.398.81-.76 1.146-1.093C14.446 6.986 15 6.131 15 4.92 15 3.326 13.676 2 12 2c-.777 0-1.418.345-1.954.852-.545.515-.93 1.152-1.152 1.595zm.392 8.292a.513.513 0 0 1-.784 0c-1.601-1.902-3.05-3.262-4.243-4.381C1.3 8.208 0 6.989 0 4.92 0 2.755 1.79 1 4 1c1.6 0 2.719 1.05 3.404 2.008.26.365.458.716.596.992a7.6 7.6 0 0 1 .596-.992C9.281 2.049 10.4 1 12 1c2.21 0 4 1.755 4 3.92 0 2.069-1.3 3.288-3.365 5.227-1.193 1.12-2.642 2.48-4.243 4.38z" />
                 </svg>
@@ -100,10 +88,33 @@
                         <path
                             d="M7.5 3a.5.5 0 0 1 .5.5v5.21l3.248 1.856a.5.5 0 0 1-.496.868l-3.5-2A.5.5 0 0 1 7 9V3.5a.5.5 0 0 1 .5-.5" />
                     </svg><span>Order history</span></a></li>
+
+            <li class="py-1 border-b"><a routerLink="/selling"
+                    class="text-primary-text no-underline text-sm flex items-center gap-4">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                        class="bi bi-shop text-primary" viewBox="0 0 16 16">
+                        <path
+                            d="M2.97 1.35A1 1 0 0 1 3.73 1h8.54a1 1 0 0 1 .76.35l2.609 3.044A1.5 1.5 0 0 1 16 5.37v.255a2.375 2.375 0 0 1-4.25 1.458A2.37 2.37 0 0 1 9.875 8 2.37 2.37 0 0 1 8 7.083 2.37 2.37 0 0 1 6.125 8a2.37 2.37 0 0 1-1.875-.917A2.375 2.375 0 0 1 0 5.625V5.37a1.5 1.5 0 0 1 .361-.976zm1.78 4.275a1.375 1.375 0 0 0 2.75 0 .5.5 0 0 1 1 0 1.375 1.375 0 0 0 2.75 0 .5.5 0 0 1 1 0 1.375 1.375 0 1 0 2.75 0V5.37a.5.5 0 0 0-.12-.325L12.27 2H3.73L1.12 5.045A.5.5 0 0 0 1 5.37v.255a1.375 1.375 0 0 0 2.75 0 .5.5 0 0 1 1 0M1.5 8.5A.5.5 0 0 1 2 9v6h1v-5a1 1 0 0 1 1-1h3a1 1 0 0 1 1 1v5h6V9a.5.5 0 0 1 1 0v6h.5a.5.5 0 0 1 0 1H.5a.5.5 0 0 1 0-1H1V9a.5.5 0 0 1 .5-.5M4 15h3v-5H4zm5-5a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1h-2a1 1 0 0 1-1-1zm3 0h-2v3h2z" />
+                    </svg><span>Start selling</span></a></li>
+
+                    <li class="py-1 border-b"><a routerLink="/sign-up"
+                    class="text-primary-text no-underline text-sm flex items-center gap-4">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person text-primary"
+            viewBox="0 0 16 16">
+            <path
+                d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6m2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0m4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4m-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10s-3.516.68-4.168 1.332c-.678.678-.83 1.418-.832 1.664z" />
+        </svg><span>Create account</span></a></li>
+
+            <li class="py-1 border-b"><button (click)="logOut()"
+                    class="text-primary-text no-underline text-sm flex items-center gap-4">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="bi bi-shop text-primary"
+                        viewBox="0 0 640 640" width="16" height="16" fill="currentColor">                        <path
+                            d="M224 160C241.7 160 256 145.7 256 128C256 110.3 241.7 96 224 96L160 96C107 96 64 139 64 192L64 448C64 501 107 544 160 544L224 544C241.7 544 256 529.7 256 512C256 494.3 241.7 480 224 480L160 480C142.3 480 128 465.7 128 448L128 192C128 174.3 142.3 160 160 160L224 160zM566.6 342.6C579.1 330.1 579.1 309.8 566.6 297.3L438.6 169.3C426.1 156.8 405.8 156.8 393.3 169.3C380.8 181.8 380.8 202.1 393.3 214.6L466.7 288L256 288C238.3 288 224 302.3 224 320C224 337.7 238.3 352 256 352L466.7 352L393.3 425.4C380.8 437.9 380.8 458.2 393.3 470.7C405.8 483.2 426.1 483.2 438.6 470.7L566.6 342.7z" />
+                    </svg><span>Log out</span></button></li>
         </ul>
     </div>
 
-    <div class="mt-4 border rounded shadow-md">
+    <!-- <div class="mt-4 border rounded shadow-md">
         <p class="m-0 text text-sm font-bold text-primary-text border-b pb-1 p-3">Reviews &
             Ratings</p>
 
@@ -118,5 +129,5 @@
                     </span></a></li>
 
         </ul>
-    </div>
+    </div> -->
 </main>
